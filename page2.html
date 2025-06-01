@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/backgrounds/favicon_20.png" type="image/png" />
+
+    <link rel="stylesheet" href="page2.css" />
+    <title>19 Times You've Helped Me</title>
+</head>
+<body>
+   <img id="logo" src="assets/backgrounds/logo_20.png" alt="Logo" />
+    <h1>19 Times You've Helped Me</h1>
+    <p1>I know this isn't something related to you. since it is your burfday I should be focusing on you but I know you love to know how you've helped me so here are a few occurences out of many.</p1>
+
+     <button id="showMediaButton">Pressy press me</button>
+
+  <div id="mediaContainer">
+    <img id="randomImage" src="" alt="Random Image" width="300">
+    <audio id="randomAudio" controls></audio>
+  </div>
+
+  <script>
+    // Total number of media pairs
+    const totalMedia = 19; // Change this if you add or remove items
+
+    const button = document.getElementById("showMediaButton");
+    const img = document.getElementById("randomImage");
+    const audio = document.getElementById("randomAudio");
+
+    button.addEventListener("click", () => {
+      const index = Math.floor(Math.random() * totalMedia) + 1;
+
+      // Set image and audio source
+      img.src = `assets/page2/img${index}.png`;
+      audio.src = `assets/page2/audio${index}.aac`;
+
+     
+    });
+  </script>
+
+
+</body>
+</html>
